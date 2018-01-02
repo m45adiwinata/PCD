@@ -22,8 +22,18 @@ for i in range(Betina):
 for i in range(Jantan):
   jantan.append(random.randint(0,7))
 WP = input("Lama waktu pengujian simulasi dalam hari : ")
+Luas = input("Luas lahan kebun stroberi dalam are : ")
 adaHama = raw_input("Apakah ada tabuhan disekitar lingkungan simulasi?(y/n)")
-if adaHama == 'y':
-  print("Keberadaan hama tabuhan dikonfirmasi")
-else:
-  print("Tidak ada hama tabuhan")
+LStroberi = int(Betina*4.96/100)
+print("Jumlah lebah yang menuju Stroberi : ",LStroberi)
+jmlTanaman = Luas*1000000/625
+print("Jumlah tanaman stroberi : ",jmlTanaman)
+BungaTanaman = []
+jmlBunga = 0
+for i in range(jmlTanaman):
+  temp = random.randint(0,5)
+  BungaTanaman.append(temp)
+  jmlBunga = jmlBunga + temp
+print("Jumlah bunga pada lahan : ",jmlBunga)
+WPanen = random.randint(3,7)
+print("Waktu panen saat ini : ",WPanen)
